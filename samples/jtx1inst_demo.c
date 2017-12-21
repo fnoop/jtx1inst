@@ -35,6 +35,7 @@ int main(void)
     printf("[POWER] GPU power rail: %.3f%s\n", convFromMilli * val, wunit);
     jtx1_get_ina3221(VDD_CPU, POWER, &val);
     printf("[POWER] CPU power rail: %.3f%s\n", convFromMilli * val, wunit);
+    /*
     jtx1_get_ina3221(VDD_MUX, POWER, &val);
     printf("[POWER] main carrier board power input: %.3f%s\n", convFromMilli * val, wunit);
     jtx1_get_ina3221(VDD_5V_IO_SYS, POWER, &val);
@@ -47,6 +48,7 @@ int main(void)
     printf("[POWER] main carrier board 1.8V supply: %.3f%s\n", convFromMilli * val, wunit);
     jtx1_get_ina3221(VDD_M2_IN, POWER, &val);
     printf("[POWER] 3.3V supply for M.2 Key E connector: %.3f%s\n", convFromMilli * val, wunit);
+    */
     printf("\n");
 
     jtx1_get_ina3221(VDD_IN, CURRENT, &val);
@@ -55,6 +57,7 @@ int main(void)
     printf("[CURRENT] GPU power rail: %.3f%s\n", convFromMilli * val, aunit);
     jtx1_get_ina3221(VDD_CPU, CURRENT, &val);
     printf("[CURRENT] CPU power rail: %.3f%s\n", convFromMilli * val, aunit);
+    /*
     jtx1_get_ina3221(VDD_MUX, CURRENT, &val);
     printf("[CURRENT] main carrier board power input: %.3f%s\n", convFromMilli * val, aunit);
     jtx1_get_ina3221(VDD_5V_IO_SYS, CURRENT, &val);
@@ -67,6 +70,7 @@ int main(void)
     printf("[CURRENT] main carrier board 1.8V supply: %.3f%s\n", convFromMilli * val, aunit);
     jtx1_get_ina3221(VDD_M2_IN, CURRENT, &val);
     printf("[CURRENT] 3.3V supply for M.2 Key E connector: %.3f%s\n", convFromMilli * val, aunit);
+    */
     printf("\n");
 
     jtx1_get_ina3221(VDD_IN, VOLTAGE, &val);
@@ -75,6 +79,7 @@ int main(void)
     printf("[VOLTAGE] GPU power rail: %.3f%s\n", convFromMilli * val, vunit);
     jtx1_get_ina3221(VDD_CPU, VOLTAGE, &val);
     printf("[VOLTAGE] CPU power rail: %.3f%s\n", convFromMilli * val, vunit);
+    /*
     jtx1_get_ina3221(VDD_MUX, VOLTAGE, &val);
     printf("[VOLTAGE] main carrier board power input: %.3f%s\n", convFromMilli * val, vunit);
     jtx1_get_ina3221(VDD_5V_IO_SYS, VOLTAGE, &val);
@@ -87,7 +92,7 @@ int main(void)
     printf("[VOLTAGE] main carrier board 1.8V supply: %.3f%s\n", convFromMilli * val, vunit);
     jtx1_get_ina3221(VDD_M2_IN, VOLTAGE, &val);
     printf("[VOLTAGE] 3.3V supply for M.2 Key E connector: %.3f%s\n", convFromMilli * val, vunit);
-
+    */
     printf("\n");
 
     jtx1_get_temp(A0, &val);
@@ -109,10 +114,12 @@ int main(void)
 
     printf("\n");
 
+    /*
     jtx1_get_rate(EMC_RATE, &rate);
     printf("[FREQ] EMC: %luHz\n", rate);
     jtx1_get_rate(GPU_RATE, &rate);
     printf("[FREQ] GPU: %luHz\n", rate);
+    */
     jtx1_get_rate(CPU0_RATE, &rate);
     printf("[FREQ] CPU0: %luHz\n", rate);
     jtx1_get_rate(CPU1_RATE, &rate);
